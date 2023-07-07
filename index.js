@@ -593,11 +593,11 @@ window.onload = function () {
     if (dailyForecastContainer.style.display === "none") {
       dailyForecastContainer.style.display = "flex";
       dailyArrows.style.display = "flex";
-      chevronImg.src = "chevron-up.svg";
+      chevronImg.src = "./images/chevron-up.svg";
     } else {
       dailyForecastContainer.style.display = "none";
       dailyArrows.style.display = "none";
-      chevronImg.src = "chevron-down.svg";
+      chevronImg.src = "images/chevron-down.svg";
     }
   }
 
