@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <script src="index.js" ></script>
+    <title>Weather App</title>
+</head>
+<body>
+
+    <div id="header">
+        <div id="header-left">
+                <img class="image" src="weather-cloudy-clock.svg" alt="weather logo">
+                <h1 id="app-title">Weather App</h2>
+
+        </div>
+        <div id="temp-toggle">
+            <button id="fahrenheit" class="temp active">F</button>
+            <button id="celsius" class="temp ">C</button>
+        </div>
+    </div>
+    <form id="search-form">
+        <div><label for="search">Location:</label></div>
+        <div id="search-container">
+            <input id="search" name="search" type="text" autocomplete="off" placeholder="City, Postal Code, Etc." required>
+            <div id="search-suggest">
+                <ul id="suggestions">
+                </ul>
+            </div>
+        </div>
+        <div><button id="search-btn">Search</button></div>
+    </form>
+    <div class="divider">
+    </div>
+
+    <div id="arrow-outer-container">
+        <div id="arrow-inner-container">
+            <div id="left-arrow">&#x2190</div>
+            <div id="right-arrow">&#8594</div>
+        </div>
+    </div>
+
+    <div id="current-forecast-outer-container">
+        <div id="current-forecast-container">
+            <div id="location-details">
+                <h1 id="current-location">New York</h1>
+                    <p id="current-region"></p>
+                    <p id="current-country"></p>
+            </div>
+            <p id="current-date">Date</p>
+            <p id="current-condition">Condition</p>
+            <div class="icon-div">
+                <img id="current-condition-icon" src="" alt="weather icon">
+            </div>
+            <p id="current-temp">Temperature</p>
+        </div>
+        <div id="current-details-container">
+            <h1 id="details-title">Details</h1>
+            <p id="current-feel">Feels Like</p>
+            <p id="current-high">High</p>
+            <p id="current-low">Low</p>
+            <p id="current-rain">Chance of Rain</p>
+            <p id="current-snow">Chance of Snow</p>
+            <p id="current-precip">Precipitation</p>
+            <p id="details-wind">Wind</p>
+            <p id="details-humidity">Humidity</p>
+            <p id="details-uv">UV Index</p>
+            <p id="details-sunrise">Sunrise</p>
+            <p id="details-sunset">Sunset</p>
+        </div>
+        <div id="hourly-forecast-container">
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+            <div class="hourly-forecast-div">
+                <h1 class="hour"></h1>
+                <p class="hourly-forecast-condition">Condition</p>
+                <img id="hourly-condition-icon" src="" alt="weather icon">
+                <p class="hourly-forecast-temp">Temperature</p>
+                <p class="hourly-forecast-rain">Chance of Rain</p>
+                <p class="hourly-forecast-snow">Chance of Snow</p>
+                <p class="hourly-forecast-precip">Precipitation</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider">
+    </div>
+
+    <div id="display-daily-forecast">
+        <div id="daily-forecast-dropdown">
+            <h1 id="daily-title">Daily Forecast</h1>
+            <img class="image" id="chevron" src="chevron-down.svg" alt="display daily forecast">
+        </div>
+        <div id="daily-arrows" style="display: none">
+            <div id="left-arrow-daily">&#x2190</div>
+            <div id="right-arrow-daily">&#8594</div>
+        </div>
+
+    </div>
+    <div id="daily-forecast-container" style="display: none">
+        <div class="daily-forecast-div">
+            <h1 class="day"></h1>
+            <p class="daily-forecast-condition">Condition</p>
+            <img id="daily-condition-icon" src="" alt="weather icon">
+            <p class="daily-forecast-high">High</p>
+            <p class="daily-forecast-low">Low</p>
+            <p class="daily-forecast-rain">Chance of Rain:</p>
+            <p class="daily-forecast-snow">Chance of Snow:</p>
+            <p class="daily-forecast-precip">Total Precipitation:</p>
+        </div>
+        <div class="daily-forecast-div">
+            <h1 class="day"></h1>
+            <p class="daily-forecast-condition">Condition</p>
+            <img id="daily-condition-icon" src="" alt="weather icon">
+            <p class="daily-forecast-high">High</p>
+            <p class="daily-forecast-low">Low</p>
+            <p class="daily-forecast-rain">Chance of Rain:</p>
+            <p class="daily-forecast-snow">Chance of Snow:</p>
+            <p class="daily-forecast-precip">Total Precipitation:</p>
+        </div>
+        <div class="daily-forecast-div">
+            <h1 class="day"></h1>
+            <p class="daily-forecast-condition">Condition</p>
+            <img id="daily-condition-icon" src="" alt="weather icon">
+            <p class="daily-forecast-high">High</p>
+            <p class="daily-forecast-low">Low</p>
+            <p class="daily-forecast-rain">Chance of Rain:</p>
+            <p class="daily-forecast-snow">Chance of Snow:</p>
+            <p class="daily-forecast-precip">Total Precipitation:</p>
+        </div>
+
+    </div>
+
+    <div class="divider">
+    </div>
+    <div class="divider">
+    </div>
+    <div class="divider">
+    </div>
+
+
+
+    <img id="bg-img" src="cloudy-sky.jpg" alt="cloudy sky">
+    <p id="photo-credits">Photo by <a href="https://unsplash.com/it/@taylorvanriper925?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Taylor Van Riper</a> on <a href="https://unsplash.com/images/nature/cloud?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </p>
+</body>
+</html>

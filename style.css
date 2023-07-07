@@ -1,0 +1,361 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    background: black;
+}
+
+#bg-img {
+    opacity: 0.8;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 2px;
+}
+
+.image {
+    max-width: 50px;
+}
+
+#app-title {
+    color: white;
+    min-width: 200px;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-left {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    align-items: center;
+}
+
+
+#fahrenheit, #celsius {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+
+
+button {
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: none;
+    background: none;
+    color: white;
+    border: solid 1px white;
+}
+
+.divider {
+    width: 100vw;
+    height: 30px;
+}
+
+.divider-long {
+    width: 100vw;
+    height: 100px;
+}
+
+#current-forecast-container {
+    color: white;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#current-forecast-outer-container {
+    background: rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr;
+    margin: 24px;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+#current-location {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+#current-temp {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#current-condition {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#location-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#display-daily-forecast {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 12px;
+    margin: 0 24px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#daily-arrows {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-content: center;
+}
+
+#daily-forecast-container {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 24px;
+    padding: 12px;
+    margin: 24px;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+.daily-forecast-div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 200px;
+}
+
+.day {
+    font-size: 1.5rem;
+}
+
+.daily-forecast-condition {
+    font-size: 1.25rem;
+}
+
+#current-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+}
+
+#hourly-forecast-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 24px;
+    padding: 12px;
+    border-left: 2px solid white;
+}
+
+.hourly-forecast-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 160px;
+}
+
+.hourly-forecast-temp {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.hourly-forecast-condition {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#left-arrow,
+#right-arrow {
+    font-size: 2rem;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+#arrow-outer-container {
+    margin: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#arrow-inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+#right-arrow:hover,
+#left-arrow:hover {
+    opacity: 1;
+}
+
+
+#left-arrow-daily,
+#right-arrow-daily {
+    font-size: 2rem;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+
+#daily-forecast-dropdown {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#daily-title {
+    min-width: 220px;
+}
+
+
+#current-condition-icon, #daily-condition-icon, #hourly-condition-icon {
+    width: 75px;
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+input {
+    border: 0 none;
+    padding: 0 10px;
+}
+
+#search-btn {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+}
+
+#search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 0px 24px;
+    position: relative;
+    color: white;
+    font-size: 1.25rem;
+}
+
+#search-form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#search-container {
+    width: 400px;
+    margin: 0;
+}
+
+#search-container #search-suggest {
+    width: 100%;
+    text-align: left;
+}
+
+#search-container input {
+    width: 95%;
+    background: none;
+    color: white;
+    height: 30px;
+    border: solid 1px white;
+    border-radius: 12px;
+    font-size: 1.25rem;
+}
+
+#search-suggest {
+    position: relative;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(48, 155, 232);
+    border-radius: 12px;
+}
+
+ul {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+ul#suggestions {
+    display: block;
+    border-radius: 12px;
+    width: 100%;
+}
+
+ul li {
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+ul li:hover {
+    color: white;
+    background: rgb(48, 155, 232);
+    text-decoration: underline;
+}
+
+.active {
+    color: yellow;
+    border: solid 2px yellow;
+    font-weight: bold;
+}
+
+#photo-credits {
+    padding: 12px;
+    position: relative;
+    bottom: 12px;
+    left: 12px;
+}
