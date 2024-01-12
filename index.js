@@ -277,7 +277,7 @@ window.onload = function () {
     let formatInp;
     let string;
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
       iPlus = i + 1;
       addDays = iPlus * 24 * 60 * 60 * 1000;
       nonEpochDate = new Date(dateTime + addDays);
@@ -319,7 +319,7 @@ window.onload = function () {
     let formatInp;
     let string;
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
       iPlus = i + 1;
       addDays = iPlus * 24 * 60 * 60 * 1000;
       nonEpochDate = new Date(dateTime + addDays);
