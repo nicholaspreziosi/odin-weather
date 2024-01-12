@@ -150,7 +150,7 @@ window.onload = function () {
 
     currentCondition.style.textTransform = "capitalize";
     let forecastArr = await getForecast(
-      `http://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
     );
     currentHigh.textContent = `High: ${forecastArr[0].day.maxtemp_f}\u00B0F`;
     currentLow.textContent = `Low: ${forecastArr[0].day.mintemp_f}\u00B0F`;
@@ -176,7 +176,7 @@ window.onload = function () {
 
     currentCondition.style.textTransform = "capitalize";
     let forecastArr = await getForecast(
-      `http://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
     );
     currentHigh.textContent = `High: ${forecastArr[0].day.maxtemp_c}\u00B0C`;
     currentLow.textContent = `Low: ${forecastArr[0].day.mintemp_c}\u00B0C`;
@@ -189,7 +189,7 @@ window.onload = function () {
     detailsHumidity.textContent = `Humidity: ${obj.current.humidity}%`;
     detailsUV.textContent = `UV Index: ${obj.current.uv}`;
     let forecastArr = await getForecast(
-      `http://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
     );
     detailsSunrise.textContent = `Sunrise: ${forecastArr[0].astro.sunrise}`;
     detailsSunset.textContent = `Sunset: ${forecastArr[0].astro.sunset}`;
@@ -201,7 +201,7 @@ window.onload = function () {
     detailsHumidity.textContent = `Humidity: ${obj.current.humidity}%`;
     detailsUV.textContent = `UV Index: ${obj.current.uv}`;
     let forecastArr = await getForecast(
-      `http://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
     );
 
     let sunrisePeriod = forecastArr[0].astro.sunrise.slice(-2);
@@ -642,11 +642,11 @@ window.onload = function () {
       );
 
       populateForecastC(
-        `http://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
       );
 
       populateHourlyForecastC(
-        `http://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
       );
     } else if (fahrenheit.classList.contains("active")) {
       populateCurrentWeatherF(
@@ -658,11 +658,11 @@ window.onload = function () {
       );
 
       populateForecastF(
-        `http://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
       );
 
       populateHourlyForecastF(
-        `http://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=f7c3f61dbc41432c855230637232706&q=${formattedLocation}&days=8&aqi=no&alerts=no`
       );
     }
   }
